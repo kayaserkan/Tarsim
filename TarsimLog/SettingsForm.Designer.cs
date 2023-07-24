@@ -45,6 +45,17 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.btnPortKaydet = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnBolgeKaydet = new System.Windows.Forms.Button();
+            this.tbBaslangic = new System.Windows.Forms.TextBox();
+            this.tbUzunluk = new System.Windows.Forms.TextBox();
+            this.tbSeparator = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.rbDiger = new System.Windows.Forms.RadioButton();
             this.groupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -57,7 +68,7 @@
             this.groupBox4.Controls.Add(this.btnPcKayit);
             this.groupBox4.Location = new System.Drawing.Point(12, 12);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(386, 211);
+            this.groupBox4.Size = new System.Drawing.Size(386, 173);
             this.groupBox4.TabIndex = 61;
             this.groupBox4.TabStop = false;
             // 
@@ -96,7 +107,7 @@
             this.btnPcKayit.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnPcKayit.Image = ((System.Drawing.Image)(resources.GetObject("btnPcKayit.Image")));
             this.btnPcKayit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPcKayit.Location = new System.Drawing.Point(26, 141);
+            this.btnPcKayit.Location = new System.Drawing.Point(26, 102);
             this.btnPcKayit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPcKayit.Name = "btnPcKayit";
             this.btnPcKayit.Size = new System.Drawing.Size(326, 49);
@@ -107,6 +118,13 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.rbDiger);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.tbSeparator);
+            this.groupBox1.Controls.Add(this.tbUzunluk);
+            this.groupBox1.Controls.Add(this.tbBaslangic);
             this.groupBox1.Controls.Add(this.rbR2);
             this.groupBox1.Controls.Add(this.rbR2M);
             this.groupBox1.Controls.Add(this.cbParity);
@@ -119,14 +137,14 @@
             this.groupBox1.Controls.Add(this.btnPortKaydet);
             this.groupBox1.Location = new System.Drawing.Point(442, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(386, 281);
+            this.groupBox1.Size = new System.Drawing.Size(386, 322);
             this.groupBox1.TabIndex = 62;
             this.groupBox1.TabStop = false;
             // 
             // rbR2
             // 
             this.rbR2.AutoSize = true;
-            this.rbR2.Location = new System.Drawing.Point(218, 153);
+            this.rbR2.Location = new System.Drawing.Point(158, 153);
             this.rbR2.Name = "rbR2";
             this.rbR2.Size = new System.Drawing.Size(97, 20);
             this.rbR2.TabIndex = 34;
@@ -229,7 +247,7 @@
             this.btnPortKaydet.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnPortKaydet.Image = ((System.Drawing.Image)(resources.GetObject("btnPortKaydet.Image")));
             this.btnPortKaydet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPortKaydet.Location = new System.Drawing.Point(26, 208);
+            this.btnPortKaydet.Location = new System.Drawing.Point(25, 261);
             this.btnPortKaydet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPortKaydet.Name = "btnPortKaydet";
             this.btnPortKaydet.Size = new System.Drawing.Size(326, 49);
@@ -238,16 +256,130 @@
             this.btnPortKaydet.UseVisualStyleBackColor = false;
             this.btnPortKaydet.Click += new System.EventHandler(this.btnPortKaydet_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "STANDART"});
+            this.comboBox1.Location = new System.Drawing.Point(70, 234);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(251, 24);
+            this.comboBox1.TabIndex = 63;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(485, 347);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 24);
+            this.comboBox2.TabIndex = 64;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Location = new System.Drawing.Point(144, 206);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(116, 20);
+            this.label4.TabIndex = 65;
+            this.label4.Text = "BÖLGE SEÇ";
+            // 
+            // btnBolgeKaydet
+            // 
+            this.btnBolgeKaydet.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnBolgeKaydet.Image = ((System.Drawing.Image)(resources.GetObject("btnBolgeKaydet.Image")));
+            this.btnBolgeKaydet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBolgeKaydet.Location = new System.Drawing.Point(38, 273);
+            this.btnBolgeKaydet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBolgeKaydet.Name = "btnBolgeKaydet";
+            this.btnBolgeKaydet.Size = new System.Drawing.Size(326, 49);
+            this.btnBolgeKaydet.TabIndex = 66;
+            this.btnBolgeKaydet.Text = "BÖLGE KAYDET";
+            this.btnBolgeKaydet.UseVisualStyleBackColor = false;
+            // 
+            // tbBaslangic
+            // 
+            this.tbBaslangic.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tbBaslangic.Location = new System.Drawing.Point(21, 219);
+            this.tbBaslangic.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbBaslangic.Name = "tbBaslangic";
+            this.tbBaslangic.Size = new System.Drawing.Size(101, 27);
+            this.tbBaslangic.TabIndex = 36;
+            // 
+            // tbUzunluk
+            // 
+            this.tbUzunluk.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tbUzunluk.Location = new System.Drawing.Point(141, 219);
+            this.tbUzunluk.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbUzunluk.Name = "tbUzunluk";
+            this.tbUzunluk.Size = new System.Drawing.Size(101, 27);
+            this.tbUzunluk.TabIndex = 37;
+            // 
+            // tbSeparator
+            // 
+            this.tbSeparator.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tbSeparator.Location = new System.Drawing.Point(261, 219);
+            this.tbSeparator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbSeparator.Name = "tbSeparator";
+            this.tbSeparator.Size = new System.Drawing.Size(101, 27);
+            this.tbSeparator.TabIndex = 38;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.Location = new System.Drawing.Point(27, 190);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(82, 16);
+            this.label5.TabIndex = 39;
+            this.label5.Text = "BAŞLANGIÇ";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.Location = new System.Drawing.Point(155, 190);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(70, 16);
+            this.label6.TabIndex = 40;
+            this.label6.Text = "UZUNLUK";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label7.Location = new System.Drawing.Point(260, 190);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(91, 16);
+            this.label7.TabIndex = 41;
+            this.label7.Text = "SEPARATÖR";
+            // 
+            // rbDiger
+            // 
+            this.rbDiger.AutoSize = true;
+            this.rbDiger.Location = new System.Drawing.Point(292, 153);
+            this.rbDiger.Name = "rbDiger";
+            this.rbDiger.Size = new System.Drawing.Size(70, 20);
+            this.rbDiger.TabIndex = 42;
+            this.rbDiger.TabStop = true;
+            this.rbDiger.Text = "DİĞER";
+            this.rbDiger.UseVisualStyleBackColor = true;
+            // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(878, 346);
+            this.Controls.Add(this.btnBolgeKaydet);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox4);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(896, 393);
+            this.MaximumSize = new System.Drawing.Size(999, 393);
             this.Name = "SettingsForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SettingsForm";
             this.Load += new System.EventHandler(this.SettingsForm_Load);
             this.groupBox4.ResumeLayout(false);
@@ -255,6 +387,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -276,5 +409,16 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btnPortKaydet;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnBolgeKaydet;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox tbSeparator;
+        private System.Windows.Forms.TextBox tbUzunluk;
+        private System.Windows.Forms.TextBox tbBaslangic;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.RadioButton rbDiger;
     }
 }

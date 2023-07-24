@@ -117,6 +117,7 @@
             this.MaximumSize = new System.Drawing.Size(1263, 668);
             this.Name = "WeightForm";
             this.Text = "WeightForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.WeightForm_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.WeightForm_FormClosed);
             this.Load += new System.EventHandler(this.WeightForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridViewLog)).EndInit();

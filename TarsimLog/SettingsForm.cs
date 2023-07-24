@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.IO.Ports;
+using System.Windows.Forms;
 
 namespace TarsimLog
 {
@@ -29,6 +22,15 @@ namespace TarsimLog
             cbPortName.Text = Properties.Settings.Default.portName;
             cbBaudRate.Text = Properties.Settings.Default.baudRate.ToString();
             cbParity.Text = Properties.Settings.Default.parity;
+            tbPcAdi.Text = Properties.Settings.Default.pcAdi;
+            if (Properties.Settings.Default.rb2m == true)
+            {
+                rbR2M.Checked = true;
+            }
+            else
+            {
+                rbR2.Checked = true;
+            }
         }
 
         private void btnPortKaydet_Click(object sender, EventArgs e)
@@ -41,20 +43,38 @@ namespace TarsimLog
                 Properties.Settings.Default.AgirlikBaslangic = 5;
                 Properties.Settings.Default.AgirlikBitis = 7;
                 Properties.Settings.Default.baudRate = 9600;
+                Properties.Settings.Default.rb2m = false;
+
             }
-            else
+            else if (rbR2M.Checked == true)
             {
                 Properties.Settings.Default.AgirlikBaslangic = 29;
                 Properties.Settings.Default.AgirlikBitis = 7;
                 Properties.Settings.Default.baudRate = 4800;
+                Properties.Settings.Default.rb2m = true;
             }
+
+            else if (rbDiger.Checked == true)
+            {
+                Properties.Settings.Default.AgirlikBaslangic = Convert.ToInt16(tbBaslangic.Text);
+                Properties.Settings.Default.AgirlikBitis = Convert.ToInt16(tbUzunluk.Text);
+                Properties.Settings.Default.baudRate = Convert.ToInt16(cbBaudRate.Text);
+                Properties.Settings.Default.rb2m = true;
+            }
+
+
             if (rbR2.Checked == true)
             {
                 Properties.Settings.Default.KesmeBaslangic = 11;
             }
-            else
+            else if (rbR2M.Checked == true)
             {
                 Properties.Settings.Default.KesmeBaslangic = 35;
+            }
+            else if (rbDiger.Checked == true)
+            {
+                Properties.Settings.Default.KesmeBaslangic = Convert.ToInt16(tbSeparator.Text);
+
             }
 
             Properties.Settings.Default.Save();

@@ -106,5 +106,29 @@ namespace TarsimLog.Properties {
                 this["pcAdi"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool rb2m {
+            get {
+                return ((bool)(this["rb2m"]));
+            }
+            set {
+                this["rb2m"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string bolge {
+            get {
+                return ((string)(this["bolge"]));
+            }
+            set {
+                this["bolge"] = value;
+            }
+        }
     }
 }

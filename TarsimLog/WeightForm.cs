@@ -92,6 +92,11 @@ namespace TarsimLog
             gridViewLog.Rows[2].Cells[1].Value = "12232343";
         }
 
+        private void WeightForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            port.Close();
+        }
+
         private void btnFileCreate_Click(object sender, EventArgs e)
         {
             DateTime dt = DateTime.Now; 
@@ -131,6 +136,8 @@ namespace TarsimLog
             string tempStr = Agirlik.Remove(kesmeBaslangic, 1);
             tempStr = tempStr.Remove(kesmeBaslangic + 1, 1);
             lblAgirlikDegeri.Text = tempStr.Substring(startByte, stopByte);
+
+            //lblAgirlikDegeri.Text = Agirlik.Substring(8, 7);
         }
     }
 }
