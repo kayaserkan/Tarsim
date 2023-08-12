@@ -35,6 +35,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnPcKayit = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rbDiger = new System.Windows.Forms.RadioButton();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tbSeparator = new System.Windows.Forms.TextBox();
+            this.tbUzunluk = new System.Windows.Forms.TextBox();
+            this.tbBaslangic = new System.Windows.Forms.TextBox();
             this.rbR2 = new System.Windows.Forms.RadioButton();
             this.rbR2M = new System.Windows.Forms.RadioButton();
             this.cbParity = new System.Windows.Forms.ComboBox();
@@ -49,13 +56,6 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnBolgeKaydet = new System.Windows.Forms.Button();
-            this.tbBaslangic = new System.Windows.Forms.TextBox();
-            this.tbUzunluk = new System.Windows.Forms.TextBox();
-            this.tbSeparator = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.rbDiger = new System.Windows.Forms.RadioButton();
             this.groupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -140,6 +140,74 @@
             this.groupBox1.Size = new System.Drawing.Size(386, 322);
             this.groupBox1.TabIndex = 62;
             this.groupBox1.TabStop = false;
+            // 
+            // rbDiger
+            // 
+            this.rbDiger.AutoSize = true;
+            this.rbDiger.Location = new System.Drawing.Point(292, 153);
+            this.rbDiger.Name = "rbDiger";
+            this.rbDiger.Size = new System.Drawing.Size(70, 20);
+            this.rbDiger.TabIndex = 42;
+            this.rbDiger.TabStop = true;
+            this.rbDiger.Text = "DİĞER";
+            this.rbDiger.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label7.Location = new System.Drawing.Point(260, 197);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(91, 16);
+            this.label7.TabIndex = 41;
+            this.label7.Text = "SEPARATÖR";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.Location = new System.Drawing.Point(155, 198);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(70, 16);
+            this.label6.TabIndex = 40;
+            this.label6.Text = "UZUNLUK";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.Location = new System.Drawing.Point(27, 197);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(82, 16);
+            this.label5.TabIndex = 39;
+            this.label5.Text = "BAŞLANGIÇ";
+            // 
+            // tbSeparator
+            // 
+            this.tbSeparator.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tbSeparator.Location = new System.Drawing.Point(261, 219);
+            this.tbSeparator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbSeparator.Name = "tbSeparator";
+            this.tbSeparator.Size = new System.Drawing.Size(101, 27);
+            this.tbSeparator.TabIndex = 38;
+            // 
+            // tbUzunluk
+            // 
+            this.tbUzunluk.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tbUzunluk.Location = new System.Drawing.Point(141, 219);
+            this.tbUzunluk.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbUzunluk.Name = "tbUzunluk";
+            this.tbUzunluk.Size = new System.Drawing.Size(101, 27);
+            this.tbUzunluk.TabIndex = 37;
+            // 
+            // tbBaslangic
+            // 
+            this.tbBaslangic.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tbBaslangic.Location = new System.Drawing.Point(21, 219);
+            this.tbBaslangic.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbBaslangic.Name = "tbBaslangic";
+            this.tbBaslangic.Size = new System.Drawing.Size(101, 27);
+            this.tbBaslangic.TabIndex = 36;
             // 
             // rbR2
             // 
@@ -296,74 +364,6 @@
             this.btnBolgeKaydet.TabIndex = 66;
             this.btnBolgeKaydet.Text = "BÖLGE KAYDET";
             this.btnBolgeKaydet.UseVisualStyleBackColor = false;
-            // 
-            // tbBaslangic
-            // 
-            this.tbBaslangic.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tbBaslangic.Location = new System.Drawing.Point(21, 219);
-            this.tbBaslangic.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbBaslangic.Name = "tbBaslangic";
-            this.tbBaslangic.Size = new System.Drawing.Size(101, 27);
-            this.tbBaslangic.TabIndex = 36;
-            // 
-            // tbUzunluk
-            // 
-            this.tbUzunluk.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tbUzunluk.Location = new System.Drawing.Point(141, 219);
-            this.tbUzunluk.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbUzunluk.Name = "tbUzunluk";
-            this.tbUzunluk.Size = new System.Drawing.Size(101, 27);
-            this.tbUzunluk.TabIndex = 37;
-            // 
-            // tbSeparator
-            // 
-            this.tbSeparator.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tbSeparator.Location = new System.Drawing.Point(261, 219);
-            this.tbSeparator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbSeparator.Name = "tbSeparator";
-            this.tbSeparator.Size = new System.Drawing.Size(101, 27);
-            this.tbSeparator.TabIndex = 38;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(27, 190);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(82, 16);
-            this.label5.TabIndex = 39;
-            this.label5.Text = "BAŞLANGIÇ";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(155, 190);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 16);
-            this.label6.TabIndex = 40;
-            this.label6.Text = "UZUNLUK";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(260, 190);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(91, 16);
-            this.label7.TabIndex = 41;
-            this.label7.Text = "SEPARATÖR";
-            // 
-            // rbDiger
-            // 
-            this.rbDiger.AutoSize = true;
-            this.rbDiger.Location = new System.Drawing.Point(292, 153);
-            this.rbDiger.Name = "rbDiger";
-            this.rbDiger.Size = new System.Drawing.Size(70, 20);
-            this.rbDiger.TabIndex = 42;
-            this.rbDiger.TabStop = true;
-            this.rbDiger.Text = "DİĞER";
-            this.rbDiger.UseVisualStyleBackColor = true;
             // 
             // SettingsForm
             // 
