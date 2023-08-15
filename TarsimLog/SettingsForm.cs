@@ -23,6 +23,10 @@ namespace TarsimLog
             cbBaudRate.Text = Properties.Settings.Default.baudRate.ToString();
             cbParity.Text = Properties.Settings.Default.parity;
             tbPcAdi.Text = Properties.Settings.Default.pcAdi;
+            tbBaslangic.Text = Properties.Settings.Default.AgirlikBaslangic.ToString(); 
+            tbUzunluk.Text = Properties.Settings.Default.AgirlikBitis.ToString();
+            tbSeparator.Text = Properties.Settings.Default.KesmeBaslangic.ToString();
+
             if (Properties.Settings.Default.rb2m == true)
             {
                 rbR2M.Checked = true;

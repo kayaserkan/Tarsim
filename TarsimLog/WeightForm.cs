@@ -31,19 +31,23 @@ namespace TarsimLog
 
         private void WeightForm_Load(object sender, EventArgs e)
         {
-            startByte = Properties.Settings.Default.AgirlikBaslangic;
-            stopByte = Properties.Settings.Default.AgirlikBitis;
-            kesmeBaslangic = Properties.Settings.Default.KesmeBaslangic;
-            port.BaudRate = Properties.Settings.Default.baudRate;
-            port.Open();
-            gridViewLog.ColumnCount = 3;
+            try
+            {
+                startByte = Properties.Settings.Default.AgirlikBaslangic;
+                stopByte = Properties.Settings.Default.AgirlikBitis;
+                kesmeBaslangic = Properties.Settings.Default.KesmeBaslangic;
+                port.BaudRate = Properties.Settings.Default.baudRate;
+                port.Open();
+                gridViewLog.ColumnCount = 3;
 
-            gridViewLog.Columns[0].Name = "Barkod";
-            gridViewLog.Columns[1].Name = "Tartım Değeri";
-            gridViewLog.Columns[2].Name = "Tarih";
-            gridViewLog.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            
-            tbBarkod.Focus();
+                gridViewLog.Columns[0].Name = "Barkod";
+                gridViewLog.Columns[1].Name = "Tartım Değeri";
+                gridViewLog.Columns[2].Name = "Tarih";
+                gridViewLog.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+                tbBarkod.Focus();
+            }
+            catch { }   
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -99,43 +103,54 @@ namespace TarsimLog
 
         private void btnFileCreate_Click(object sender, EventArgs e)
         {
-            DateTime dt = DateTime.Now; 
-            SaveFileDialog save = new SaveFileDialog();
-            save.CreatePrompt = true; // dosya yoksa üret
-            save.Title = "Metin Dosyaları";
-            save.DefaultExt = "txt";
-            save.Filter = "txt Dosyaları (*.txt)|*.txt|Tüm Dosyalar(*.*)|*.*";
-            save.FileName = Properties.Settings.Default.pcAdi + dt.Day.ToString() + "-" + dt.Month.ToString() + "-" + dt.Year.ToString() + "-" + dt.Hour.ToString() + dt.Minute.ToString() + dt.Second.ToString();
-            
-            if (save.ShowDialog() == DialogResult.OK)
+            try
             {
-                StreamWriter Kayit = new StreamWriter(save.FileName);
-                for (int i = 0; i < _counter; i++)
+                DateTime dt = DateTime.Now;
+                SaveFileDialog save = new SaveFileDialog();
+                save.CreatePrompt = true; // dosya yoksa üret
+                save.Title = "Metin Dosyaları";
+                save.DefaultExt = "txt";
+                save.Filter = "txt Dosyaları (*.txt)|*.txt|Tüm Dosyalar(*.*)|*.*";
+                save.FileName = Properties.Settings.Default.pcAdi + dt.Day.ToString() + "-" + dt.Month.ToString() + "-" + dt.Year.ToString() + "-" + dt.Hour.ToString() + dt.Minute.ToString() + dt.Second.ToString();
+
+                if (save.ShowDialog() == DialogResult.OK)
                 {
-                    Kayit.Write(_recordBarkod[i]);
-                    Kayit.Write("-");
-                    Kayit.Write(_recordValue[i]);
-                    Kayit.Write("-");
-                    Kayit.WriteLine(_recordTime[i]);
+                    StreamWriter Kayit = new StreamWriter(save.FileName);
+                    for (int i = 0; i < _counter; i++)
+                    {
+                        Kayit.Write(_recordBarkod[i]);
+                        Kayit.Write("-");
+                        Kayit.Write(_recordValue[i]);
+                        Kayit.Write("-");
+                        Kayit.WriteLine(_recordTime[i]);
+                    }
+                    Kayit.Close();
+                    for (int i = 0; i < _recordBarkod.Length; i++)
+                    {
+                        _recordBarkod[i] = "";
+                        _recordValue[i] = "";
+                        _recordTime[i] = "";
+                    }
+                    _counter = 0;
+                    gridViewLog.Rows.Clear();
                 }
-                Kayit.Close();
-                for (int i = 0; i < _recordBarkod.Length; i++)
-                {
-                    _recordBarkod[i] = "";
-                    _recordValue[i] = "";
-                    _recordTime[i] = "";
-                }
-                _counter = 0;
-                gridViewLog.Rows.Clear();
+            }
+            catch (Exception cd) 
+            {
+                MessageBox.Show(cd.Message);
             }
         }
 
         void MyDataReceivedHandler(object sender, SerialDataReceivedEventArgs e)
         {
-            string Agirlik = port.ReadLine();
-            string tempStr = Agirlik.Remove(kesmeBaslangic, 1);
-            tempStr = tempStr.Remove(kesmeBaslangic + 1, 1);
-            lblAgirlikDegeri.Text = tempStr.Substring(startByte, stopByte);
+            try
+            {
+                string Agirlik = port.ReadLine();
+                string tempStr = Agirlik.Remove(kesmeBaslangic, 1);
+                tempStr = tempStr.Remove(kesmeBaslangic + 1, 1);
+                lblAgirlikDegeri.Text = tempStr.Substring(startByte, stopByte);
+            }
+            catch { }
 
             //lblAgirlikDegeri.Text = Agirlik.Substring(8, 7);
         }
